@@ -1,0 +1,121 @@
+/*
+ * DIAGNOSTIC STYLESHEET — "what is ours vs what is Stripe's"
+ *
+ * This is a deliberately bright version of style.css. Its only purpose is to
+ * make the iframe boundary visible. Everything this file can colour is YOURS
+ * (it lives in your checkout.html). Anything that stays plain — the card
+ * fields, the payment-method icons, the country dropdown — is rendered by
+ * Stripe inside an <iframe> your CSS cannot reach. That is the proof.
+ *
+ * To use: back up your real style.css, then swap this in temporarily.
+ *   - Reload http://127.0.0.1:5000
+ *   - Your page turns bright/striped; the Stripe card box stays normal.
+ * Swap the real file back when you're done.
+ */
+
+:root {
+  --ours: #00c853;
+  --ours-dark: #009624;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    45deg, #00c853, #00c853 20px, #00e676 20px, #00e676 40px);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #fff;
+}
+
+/* The card we drew. A thick dashed border labels it as our territory. */
+main {
+  background: var(--ours-dark);
+  width: 100%;
+  max-width: 460px;
+  margin: 2rem;
+  padding: 2rem;
+  border: 4px dashed #ffffff;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* A floating label so the screenshot is self-explanatory. */
+main::before {
+  content: "Everything inside this dashed border is styled by our own styling sheet.";
+  position: absolute;
+  top: -2.4rem;
+  left: 0;
+  font-size: 0.8rem;
+  color: #00251a;
+  background: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+h1 { font-size: 1.25rem; margin: 0 0 0.25rem; color: #fff; }
+
+.sub { color: #b9f6ca; font-size: 0.875rem; margin: 0 0 1.5rem; }
+
+/*
+ * THE KEY ELEMENT!!! This div is ours, so we can colour its box — here a loud
+ * orange frame with a label. But its CONTENTS (the Stripe iframe) are NOT
+ * ours: the card fields inside will keep Stripe's own plain styling no
+ * matter what we write here. That visible mismatch is the boundary.
+ */
+#payment-element {
+  margin-bottom: 1.25rem;
+  border: 3px solid #ff6d00;
+  padding: 0.5rem;
+  position: relative;
+}
+
+#payment-element::before {
+  content: "Anything in this orange frame is the section where the UI response from Stripe gets injected into. The response is Stripe's iframe, and our CSS cannot edit it. But Stipe does provide a spearate theming API to customise this as well.";
+  display: block;
+  font-size: 0.7rem;
+  color: #ff6d00;
+  background: #fff;
+  padding: 0.15rem 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Our button — fully ours, so it obeys every colour we set. */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #ff6d00;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+#message {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #fff;
+  min-height: 1.25rem;
+}
+
+.hint {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #b9f6ca;
+}
+
+code {
+  background: #00251a;
+  color: #69f0ae;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}

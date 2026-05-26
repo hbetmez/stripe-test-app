@@ -1,0 +1,52 @@
+category,host,description,requests,methods,bytes
+analytics,r.stripe.com,Analytics / event + error reporting,450,POST,0
+sdk,js.stripe.com,Stripe.js SDK delivery (CDN),81,GET,4077510
+third-party,api.hcaptcha.com,Non-Stripe host: api.hcaptcha.com,52,POST,3612
+api,api.stripe.com,Core REST API (PaymentIntents etc.),25,"GET,POST",468369
+sdk,b.stripecdn.com,Stripe CDN asset host,18,GET,30517
+stripe-other,merchant-ui-api.stripe.com,Unrecognized Stripe-related host: merchant-ui-api.stripe.com,16,GET,560
+third-party,firefox.settings.services.mozilla.com,Non-Stripe host: firefox.settings.services.mozilla.com,9,GET,74835
+third-party,mozilla-ohttp.fastly-edge.com,Non-Stripe host: mozilla-ohttp.fastly-edge.com,7,POST,48231
+third-party,incoming.telemetry.mozilla.org,Non-Stripe host: incoming.telemetry.mozilla.org,7,POST,140
+third-party,merino.services.mozilla.com,Non-Stripe host: merino.services.mozilla.com,6,GET,4674
+third-party,www.google.com,Non-Stripe host: www.google.com,5,GET,55
+third-party,hcaptcha.com,Non-Stripe host: hcaptcha.com,5,GET,450514
+third-party,push.services.mozilla.com,Non-Stripe host: push.services.mozilla.com,5,GET,0
+third-party,newassets.hcaptcha.com,Non-Stripe host: newassets.hcaptcha.com,4,GET,682542
+stripe-other,ppm.stripe.com,Unrecognized Stripe-related host: ppm.stripe.com,2,GET,13926
+third-party,ads-img.mozilla.org,Non-Stripe host: ads-img.mozilla.org,2,GET,20881
+third-party,0cfa7ec53965.w.hcaptcha.com,Non-Stripe host: 0cfa7ec53965.w.hcaptcha.com,1,GET,2593
+third-party,02a55328e100.w.hcaptcha.com,Non-Stripe host: 02a55328e100.w.hcaptcha.com,1,GET,2593
+third-party,0153c57a35a1.w.hcaptcha.com,Non-Stripe host: 0153c57a35a1.w.hcaptcha.com,1,GET,2593
+third-party,708e446f5650.w.hcaptcha.com,Non-Stripe host: 708e446f5650.w.hcaptcha.com,1,GET,2593
+third-party,6a4f06548604.w.hcaptcha.com,Non-Stripe host: 6a4f06548604.w.hcaptcha.com,1,GET,2593
+third-party,65f650e7f87b.w.hcaptcha.com,Non-Stripe host: 65f650e7f87b.w.hcaptcha.com,1,GET,2593
+third-party,5d6f2d80b116.w.hcaptcha.com,Non-Stripe host: 5d6f2d80b116.w.hcaptcha.com,1,GET,2593
+third-party,43cddcca7106.w.hcaptcha.com,Non-Stripe host: 43cddcca7106.w.hcaptcha.com,1,GET,2593
+third-party,40513ec6bd8c.w.hcaptcha.com,Non-Stripe host: 40513ec6bd8c.w.hcaptcha.com,1,GET,2593
+third-party,229ab879a62a.w.hcaptcha.com,Non-Stripe host: 229ab879a62a.w.hcaptcha.com,1,GET,2593
+third-party,1e6d2adca545.w.hcaptcha.com,Non-Stripe host: 1e6d2adca545.w.hcaptcha.com,1,GET,2593
+third-party,1cf3655c4198.w.hcaptcha.com,Non-Stripe host: 1cf3655c4198.w.hcaptcha.com,1,GET,2593
+third-party,1324d94d383f.w.hcaptcha.com,Non-Stripe host: 1324d94d383f.w.hcaptcha.com,1,GET,2593
+third-party,93275f7bad46.w.hcaptcha.com,Non-Stripe host: 93275f7bad46.w.hcaptcha.com,1,GET,2593
+third-party,8c632bcfb2e9.w.hcaptcha.com,Non-Stripe host: 8c632bcfb2e9.w.hcaptcha.com,1,GET,2593
+third-party,935851b4abe9.w.hcaptcha.com,Non-Stripe host: 935851b4abe9.w.hcaptcha.com,1,GET,2593
+third-party,9424dcc571ed.w.hcaptcha.com,Non-Stripe host: 9424dcc571ed.w.hcaptcha.com,1,GET,2593
+third-party,a3c3b4596608.w.hcaptcha.com,Non-Stripe host: a3c3b4596608.w.hcaptcha.com,1,GET,2593
+third-party,8f8d6a57747c.w.hcaptcha.com,Non-Stripe host: 8f8d6a57747c.w.hcaptcha.com,1,GET,2593
+third-party,ce30cf0cf8a5.w.hcaptcha.com,Non-Stripe host: ce30cf0cf8a5.w.hcaptcha.com,1,GET,2593
+third-party,ca4e9d0444da.w.hcaptcha.com,Non-Stripe host: ca4e9d0444da.w.hcaptcha.com,1,GET,2593
+third-party,c78772cae206.w.hcaptcha.com,Non-Stripe host: c78772cae206.w.hcaptcha.com,1,GET,2593
+third-party,bd5f5e13743b.w.hcaptcha.com,Non-Stripe host: bd5f5e13743b.w.hcaptcha.com,1,GET,2593
+third-party,bb2be172a394.w.hcaptcha.com,Non-Stripe host: bb2be172a394.w.hcaptcha.com,1,GET,2593
+third-party,b84c45fee687.w.hcaptcha.com,Non-Stripe host: b84c45fee687.w.hcaptcha.com,1,GET,2593
+third-party,aus5.mozilla.org,Non-Stripe host: aus5.mozilla.org,1,GET,1052
+third-party,ad57d46173e9.w.hcaptcha.com,Non-Stripe host: ad57d46173e9.w.hcaptcha.com,1,GET,2593
+third-party,f0d9cc99dd9b.w.hcaptcha.com,Non-Stripe host: f0d9cc99dd9b.w.hcaptcha.com,1,GET,2593
+third-party,edf93f4926b5.w.hcaptcha.com,Non-Stripe host: edf93f4926b5.w.hcaptcha.com,1,GET,2593
+third-party,eb512d9e4828.w.hcaptcha.com,Non-Stripe host: eb512d9e4828.w.hcaptcha.com,1,GET,2593
+third-party,e65b4086e2b5.w.hcaptcha.com,Non-Stripe host: e65b4086e2b5.w.hcaptcha.com,1,GET,2593
+third-party,ded83594ad9e.w.hcaptcha.com,Non-Stripe host: ded83594ad9e.w.hcaptcha.com,1,GET,2593
+third-party,e04e73a33c92.w.hcaptcha.com,Non-Stripe host: e04e73a33c92.w.hcaptcha.com,1,GET,2593
+third-party,content-signature-2.cdn.mozilla.net,Non-Stripe host: content-signature-2.cdn.mozilla.net,1,GET,0
+third-party,sentry.hcaptcha.com,Non-Stripe host: sentry.hcaptcha.com,1,POST,41

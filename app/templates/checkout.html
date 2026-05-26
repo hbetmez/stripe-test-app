@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buy Nothing Online Shop Checkout</title>
+
+  <!--
+    Stripe.js is loaded from js.stripe.com. Loading it from Stripe's own CDN
+    (rather than self-hosting) is REQUIRED by Stripe and is itself one of the
+    findings for the assignment: the SDK delivery is a separate CI dependency.
+  -->
+  <script src="https://js.stripe.com/v3/"></script>
+
+  <link rel="stylesheet" href="/static/style.diagnostic.css" />
+</head>
+<body>
+  <main>
+    <h1>Buy Nothing Online Shop</h1>
+    <p class="sub">
+      You will magically pay the money specified below.
+    </p>
+
+    <div id="payment-element"><!-- Stripe Payment Element mounts here --></div>
+
+    <button id="submit">
+      <span id="button-text">Pay &euro;99.99</span>
+    </button>
+
+    <div id="message" role="alert"></div>
+
+    <p class="hint">
+      Use the following card for testing purposes: <br>
+      Test card: <code>4242 4242 4242 4242</code> &middot;
+      choose any future expiry &middot; choose any CVC. <br>
+      The rest are not necessary to change/fill in.
+    </p>
+  </main>
+
+  <!-- publishable key injected by Flask -->
+  <script>
+    window.STRIPE_PUBLISHABLE_KEY = "{{ publishable_key }}";
+  </script>
+  <script src="/static/checkout.js"></script>
+</body>
+</html>
